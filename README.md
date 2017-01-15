@@ -8,7 +8,7 @@ In particular, optimize the critical rendering path and make this page render as
 ### Getting started
 
 #File Structure
-###### app #######
+###### app/ #######
 Contains most/ nearly all files and directories forked from the original project (images, JS, CSS etc).
 
 ###### dist/ #######
@@ -31,13 +31,13 @@ To Install Gulp on Windows using the command prompt.
 3. Initialize your package.json file and fill out it's details appropriately.
 
   ```
-  C:\Users\Christiaan\PhpstormProjects> npm init
+  $> npm init
   ```    
 
 4. Run this command from your project root folder to install gulp into your project
 
   ```
-  C:\Users\Christiaan\PhpstormProjects> npm install gulp --save-dev
+  $> npm install gulp --save-dev
   ```    
 
 5. Create a JS filed named gulpfile.js in your project root directory.
@@ -48,7 +48,7 @@ To Install Gulp on Windows using the command prompt.
   //Create a variable named gulp to reference our gulp files in the node_modules folder when installed
   var gulp = require('gulp');
   
-  //create a task name that will perform something when called upon
+  //after each task/plugin install, create a task name that will perform the task when called upon
   gulp.task('task-name',function () {
       //do something eg. console.log('Hello World');
   });
@@ -59,22 +59,22 @@ To Install Gulp on Windows using the command prompt.
     * Minify CSS with gulp-clean-css [https://www.npmjs.com/package/gulp-clean-css/]
 
       ```
-      C:\Users\Christiaan\PhpstormProjects> npm install gulp-clean-css --save-dev
+      $> npm install gulp-clean-css --save-dev
       ```    
     
     * To help handle error conditions with Node streams install gulp-pump [https://github.com/mafintosh/pump] 
     
-          ```
-          C:\Users\Christiaan\PhpstormProjects> npm install pump
-          ```    
+      ```
+      $> npm install pump
+      ```    
     
     * Minify JS with gulp-uglify[https://www.npmjs.com/package/gulp-uglify/] 
 
       ```
-      C:\Users\Christiaan\PhpstormProjects> npm install --save-dev gulp-uglify
+      $> npm install --save-dev gulp-uglify
       ```    
 
-8. Update your gulpfile.js, changing the .src and .dest to your respective project directory locations
+8. Update your gulpfile.js, changing the .src and .dest defined below to your own respective project directory locations
 
   ```gulpfile.js
 var gulp = require('gulp');
@@ -104,12 +104,12 @@ gulp.task('compress', function (cb) {
 
     * Minify CSS
       ```
-      C:\Users\Christiaan\PhpstormProjects> gulp minify-css
+      $> gulp minify-css
       ```    
     
     * Minify JS
       ```
-      C:\Users\Christiaan\PhpstormProjects> gulp compress
+      $> gulp compress
       ```    
 
 
