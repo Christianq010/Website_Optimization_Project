@@ -1,13 +1,14 @@
 ## Website Performance Optimization portfolio project
 
 **Optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.**
+
 In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
 
 ### Getting started
 
 #File Structure
-###### app/ #######
+###### project root folder #######
 Contains most/ nearly all files and directories forked from the original project (images, JS, CSS etc).
 
 ###### dist/ #######
@@ -16,17 +17,25 @@ Contains files and directories from tools and builds used to automate workflow s
 ##Solution
 ###The Build
 * Installed Gulp [http://gulpjs.com/] so that CSS and JS can be minified. 
-To Install Gulp on Windows 
-1. You need to install Node.js [https://nodejs.org/en/] on your system prior to installing Gulp.
+
+To Install Gulp on Windows using the command prompt.
+
+1. Install Node.js [https://nodejs.org/en/] on your system prior to installing Gulp.
+
 2. Run this command to install the Gulp command line interface
+
   ```
   $> npm install gulp-cli -g
   ```
-3. Initialize your package.json file and fill out it's details appropriately
+
+3. Initialize your package.json file and fill out it's details appropriately.
+
   ```
   C:\Users\Christiaan\PhpstormProjects> npm init
   ```    
+
 4. Run this command from your project root folder to install gulp into your project
+
   ```
   C:\Users\Christiaan\PhpstormProjects> npm install gulp --save-dev
   ```    
