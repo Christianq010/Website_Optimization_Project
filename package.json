@@ -1,0 +1,14 @@
+{
+  "name": "frontend-nanodegree-mobile-portfolio-master",
+  "version": "1.0.0",
+  "description": "project 6 of the Udacity FEND - Website Optimization",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
