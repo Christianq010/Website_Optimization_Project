@@ -12,6 +12,10 @@
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Christianq010/Website_Optimization_Project/issues"
+  },
+  "homepage": "https://github.com/Christianq010/Website_Optimization_Project#readme",
   "devDependencies": {
     "gulp": "^3.9.1"
   }

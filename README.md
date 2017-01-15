@@ -8,7 +8,7 @@ In particular, optimize the critical rendering path and make this page render as
 ### Getting started
 
 #File Structure
-###### project root folder #######
+###### app #######
 Contains most/ nearly all files and directories forked from the original project (images, JS, CSS etc).
 
 ###### dist/ #######
@@ -16,7 +16,7 @@ Contains files and directories from tools and builds used to automate workflow s
 
 ##Solution
 ###The Build
-* Installed Gulp [http://gulpjs.com/] so that CSS and JS can be minified. 
+**Installed Gulp [http://gulpjs.com/] so that CSS and JS can be minified.** 
 
 To Install Gulp on Windows using the command prompt.
 
@@ -39,6 +39,28 @@ To Install Gulp on Windows using the command prompt.
   ```
   C:\Users\Christiaan\PhpstormProjects> npm install gulp --save-dev
   ```    
+
+5. Create a JS filed named gulpfile.js in your project root directory.
+
+6. Type the following into your gulpfile.js to create gulp tasks, name and run them.
+
+  ```gulpfile.js
+  //Create a variable named gulp to reference our gulp files in the node_modules folder when installed
+  var gulp = require('gulp');
+  
+  //create a task name that will perform something when called upon
+  gulp.task('task-name',function () {
+      //do something eg. console.log('Hello World');
+  });
+  ```    
+
+7. Install Gulp plug ins gulp-clean-css [https://www.npmjs.com/package/gulp-clean-css/] and gulp-uglify[https://www.npmjs.com/package/gulp-uglify/] following the instructions on the site. 
+
+8. Your gulpfile.js should look something like this 
+
+
+9. Run the following commands on your command line interface to run gulp and minify CSS / uglify JS
+
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
 
