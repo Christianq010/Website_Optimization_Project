@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Christianq010/Website_Optimization_Project#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
   }
 }

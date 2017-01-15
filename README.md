@@ -42,7 +42,7 @@ To Install Gulp on Windows using the command prompt.
 
 5. Create a JS filed named gulpfile.js in your project root directory.
 
-6. Type the following into your gulpfile.js to create gulp tasks, name and run them.
+6. Your gulpfile.js would look something like this - to create gulp tasks, name and run them.
 
   ```gulpfile.js
   //Create a variable named gulp to reference our gulp files in the node_modules folder when installed
@@ -54,35 +54,70 @@ To Install Gulp on Windows using the command prompt.
   });
   ```    
 
-7. Install Gulp plug ins gulp-clean-css [https://www.npmjs.com/package/gulp-clean-css/] and gulp-uglify[https://www.npmjs.com/package/gulp-uglify/] following the instructions on the site. 
+7. Install the following Gulp plug ins
 
-8. Your gulpfile.js should look something like this 
+    * Minify CSS with gulp-clean-css [https://www.npmjs.com/package/gulp-clean-css/]
+
+      ```
+      C:\Users\Christiaan\PhpstormProjects> npm install gulp-clean-css --save-dev
+      ```    
+    
+    * To help handle error conditions with Node streams install gulp-pump [https://github.com/mafintosh/pump] 
+    
+          ```
+          C:\Users\Christiaan\PhpstormProjects> npm install pump
+          ```    
+    
+    * Minify JS with gulp-uglify[https://www.npmjs.com/package/gulp-uglify/] 
+
+      ```
+      C:\Users\Christiaan\PhpstormProjects> npm install --save-dev gulp-uglify
+      ```    
+
+8. Update your gulpfile.js, changing the .src and .dest to your respective project directory locations
+
+  ```gulpfile.js
+var gulp = require('gulp');
+var cleanCSS = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
+
+gulp.task('minify-css', function() {
+    return gulp.src('app/css/style.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('compress', function (cb) {
+    pump([
+            gulp.src('app/js/perfmatters.js'),
+            uglify(),
+            gulp.dest('dist/js')
+        ],
+        cb
+    );
+});
+  ```    
 
 
 9. Run the following commands on your command line interface to run gulp and minify CSS / uglify JS
 
+    * Minify CSS
+      ```
+      C:\Users\Christiaan\PhpstormProjects> gulp minify-css
+      ```    
+    
+    * Minify JS
+      ```
+      C:\Users\Christiaan\PhpstormProjects> gulp compress
+      ```    
+
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
 
-Some useful tips to help you get started:
+Repository hosted via Github pages at - https://christianq010.github.io/Website_Optimization_Project/
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
-
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
-
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
+1. Copy the public URL and runn it through PageSpeed Insights!
 
 Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
