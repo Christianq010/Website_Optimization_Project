@@ -117,9 +117,13 @@ gulp.task('compress', function (cb) {
 
 Repository hosted via Github pages at - https://christianq010.github.io/Website_Optimization_Project/
 
-1. Copy the public URL and runn it through PageSpeed Insights!
+1. Attribute media="print" added to the print.css to unblock critical rendering path.
+2. Attribute async added to Google Analytics Script to prevent blocking of DOM construction. 
+3. Minified perfmatters script file.
+4. Minified and Inlined style.css
+5. Loaded Google Fonts asyncronoulsy with Web Font Loader.
+6. Compressed all Images using gulp-image
 
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
@@ -129,6 +133,7 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 
 #Resources
 ### Optimization Tips and Tricks
+* [Web Font Loader](https://github.com/typekit/webfontloader)
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
 * [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
@@ -139,6 +144,9 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
+
+### Additional Gulp Plug-ins
+* Optimize various image formats with gulp-mage [https://www.npmjs.com/package/bsh-iot-gulp-image/]
 
 ### Customization with Bootstrap
 The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
