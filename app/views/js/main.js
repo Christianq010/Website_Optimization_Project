@@ -504,7 +504,6 @@ function requestTick() {
     ticking = true;
 }
 
-
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
