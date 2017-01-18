@@ -1,5 +1,7 @@
 ## Website Performance Optimization portfolio project
 
+Repository hosted via Github pages at - https://christianq010.github.io/Website_Optimization_Project/
+
 **Optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.**
 
 In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -15,6 +17,27 @@ Contains most/ nearly all files and directories forked from the original project
 Contains files and directories from tools and builds used to automate workflow such as gulp, compressed images etc.
 
 ##Solution
+
+####Part 1: Optimize PageSpeed Insights score for index.html
+
+1. Attribute media="print" added to the print.css to unblock critical rendering path.
+2. Attribute async added to Google Analytics Script to prevent blocking of DOM construction. 
+3. Minified perfmatters.js script file.
+4. Minified and In-lined style.css
+5. Loaded Google Fonts asyncronoulsy with the Web Font Loader.
+6. Compressed all Images using gulp-image, resized pizzeria.jpg
+
+
+####Part 2: Optimize Frames per Second in pizza.html
+
+Modify views/js/main.js to a frames per second rate of 60 fps or higher.
+
+1. Added meta tags to <head>.
+2. 
+3.
+
+You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+
 ###The Build
 **Installed Gulp [http://gulpjs.com/] so that CSS and JS can be minified.** 
 
@@ -112,24 +135,6 @@ gulp.task('compress', function (cb) {
       $> gulp compress
       ```    
 
-
-####Part 1: Optimize PageSpeed Insights score for index.html
-
-Repository hosted via Github pages at - https://christianq010.github.io/Website_Optimization_Project/
-
-1. Attribute media="print" added to the print.css to unblock critical rendering path.
-2. Attribute async added to Google Analytics Script to prevent blocking of DOM construction. 
-3. Minified perfmatters script file.
-4. Minified and Inlined style.css
-5. Loaded Google Fonts asyncronoulsy with Web Font Loader.
-6. Compressed all Images using gulp-image
-
-
-####Part 2: Optimize Frames per Second in pizza.html
-
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
-
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
 #Resources
 ### Optimization Tips and Tricks
