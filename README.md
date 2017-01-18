@@ -37,10 +37,14 @@ Modify main.js to a frames per second rate of 60 fps or higher.
 3. Edited function changePizzaSizes to use the variable pizzaContainer in loop.
 4. Methods querySelector and querySelectorAll changed to getElementById and getElementsByClassName respectively.
 5. Variable movingPizzas used in for loop.
-6. 
+6. Stopped FSL by on changePizzaSizes as it returns the size difference to change the size of a pizza element.
+7. Deleted the function determineDx. Pizza size changed inside changePizzaSizes.
+8.
+9.
 
 
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+
+FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
 ###The Build
 **Install Gulp [http://gulpjs.com/] so that CSS and JS can be minified.** 
