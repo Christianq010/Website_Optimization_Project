@@ -12,7 +12,7 @@ gulp.task('minify-css', function() {
 
 gulp.task('compress', function (cb) {
     pump([
-            gulp.src('app/js/perfmatters.js'),
+            gulp.src('app/views/js/main.min.js'),
             uglify(),
             gulp.dest('dist/js')
         ],

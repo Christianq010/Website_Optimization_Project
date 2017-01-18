@@ -11,10 +11,10 @@ In particular, optimize the critical rendering path and make this page render as
 
 #File Structure
 ###### app/ #######
-Contains most/ nearly all files and directories forked from the original project (images, JS, CSS etc).
+Contains most/ nearly all files and directories forked from the original project edited for testing and development(images, JS, CSS etc).
 
 ###### dist/ #######
-Contains files and directories from tools and builds used to automate workflow such as gulp, compressed images etc.
+Contains files and directories from tools and builds used to automate workflow such as gulp, minified files and compressed images etc.
 
 ##Solution
 
@@ -41,6 +41,7 @@ Modify main.js to a frames per second rate of 60 fps or higher.
 7. Deleted the function determineDx. Pizza size changed inside changePizzaSizes.
 8. Debouncing Scroll Events using requestAnimationFrame on the updatePositions function.
 9. Sliding Pizza's styled by accessing items in the array outside it's loop.
+10. Minified main.js
 
 FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
