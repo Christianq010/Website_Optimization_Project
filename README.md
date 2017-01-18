@@ -30,20 +30,20 @@ Contains files and directories from tools and builds used to automate workflow s
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-Modify views/js/main.js to a frames per second rate of 60 fps or higher.
+Modify main.js to a frames per second rate of 60 fps or higher.
 
 1. Added meta tags to <head>.
 2. Variables declared outside of loops.
 3. Edited function changePizzaSizes to use the variable pizzaContainer in loop.
-4. 
-5.
-6.
+4. Methods querySelector and querySelectorAll changed to getElementById and getElementsByClassName respectively.
+5. Variable movingPizzas used in for loop.
+6. 
 
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
 ###The Build
-**Installed Gulp [http://gulpjs.com/] so that CSS and JS can be minified.** 
+**Install Gulp [http://gulpjs.com/] so that CSS and JS can be minified.** 
 
 To Install Gulp on Windows using the command prompt.
 
