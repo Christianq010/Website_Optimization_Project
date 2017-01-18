@@ -2,7 +2,7 @@
 
 Repository hosted via Github pages at - https://christianq010.github.io/Website_Optimization_Project/
 
-**Optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.**
+**Optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score of over 90/100 and runs at 60 frames per second.**
 
 In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
@@ -39,10 +39,8 @@ Modify main.js to a frames per second rate of 60 fps or higher.
 5. Variable movingPizzas used in for loop.
 6. Stopped FSL by on changePizzaSizes as it returns the size difference to change the size of a pizza element.
 7. Deleted the function determineDx. Pizza size changed inside changePizzaSizes.
-8.
-9.
-
-
+8. Debouncing Scroll Events using requestAnimationFrame on the updatePositions function.
+9. Sliding Pizza's styled by accessing items in the array outside it's loop.
 
 FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
@@ -151,6 +149,7 @@ gulp.task('compress', function (cb) {
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
 * [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
 * [Avoiding Rendering Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css.html "render blocking css")
+* [Implementing requestAnimationFrame](https://www.html5rocks.com/en/tutorials/speed/animations/)
 * [Optimizing JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript.html "javascript")
 * [Measuring with Navigation Timing](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp.html "nav timing api"). We didn't cover the Navigation Timing API in the first two lessons but it's an incredibly useful tool for automated page profiling. I highly recommend reading.
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads.html">The fewer the downloads, the better</a>

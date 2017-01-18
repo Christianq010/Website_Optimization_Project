@@ -483,6 +483,28 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   console.log("Average scripting time to generate last 10 frames: " + sum / 10 + "ms");
 }
 
+// Debouncing Scroll Events requestAnimationFrame
+// Source - http://www.html5rocks.com/en/tutorials/speed/animations/
+
+// variable to store scroll position
+var latestKnownScrollY = 0,
+    ticking = false;
+
+// Store scroll position and call requestAnimationFrame through requestTick
+function onScroll() {
+    latestKnownScrollY = window.scrollY;
+    requestTick();
+}
+
+// calls requestAnimationFrame
+function requestTick() {
+    if(!ticking) {
+        window.requestAnimationFrame(updatePositions);
+    }
+    ticking = true;
+}
+
+
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
@@ -492,9 +514,16 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.getElementsByClassName('mover');
+
+//Calculation of Phase moved onto it's own array
+        phaseArray = [];
+    for (var phase = 0; phase < items.length; phase++) {
+        phaseArray.push(Math.sin((document.body.scrollTop / 1250) + (phase % 5)));
+    }
+
+//Pizza's styled by accessing items in the array
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    items[i].style.left = items[i].basicLeft + 100 * phaseArray[(i % 5)] + 'px';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
