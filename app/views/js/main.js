@@ -542,10 +542,18 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-
+  var elem;
   var movingPizzas = document.getElementById("movingPizzas1");
-  for (var i = 0; i < 200; i++) {
-    var elem = document.createElement('img');
+
+  // numberOfPizzas - to display determined by dividing screen.height
+  // by the height of a scrolling pizza row (s),
+  // and multiplying the result by the number of cols (cols).
+  var screenHeight = window.screen.height;
+  var rows = Math.floor(screenHeight / s);
+  var numberOfPizzas = rows * cols;
+
+  for (var i = 0; i < numberOfPizzas; i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";

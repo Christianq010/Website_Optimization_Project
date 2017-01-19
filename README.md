@@ -41,7 +41,9 @@ Modify main.js to a frames per second rate of 60 fps or higher.
 7. Deleted the function determineDx. Pizza size changed inside changePizzaSizes.
 8. Debouncing Scroll Events using requestAnimationFrame on the updatePositions function.
 9. Sliding Pizza's styled by accessing items in the array outside it's loop.
-10. Minified main.js
+10. Number of pizzas to display determined dynamically by dividing screen.height (the height of the user's screen) 
+    by the height of a scrolling pizza row(s) and multiplying the result by the number of cols(cols).
+11. Minified main.js
 
 FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
