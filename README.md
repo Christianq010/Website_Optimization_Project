@@ -9,16 +9,16 @@ In particular, optimize the critical rendering path and make this page render as
 
 ### Getting started
 
-#File Structure
+# File Structure
 ###### app/ #######
 Contains most/ nearly all files and directories forked from the original project edited for testing and development(images, JS, CSS etc).
 
 ###### dist/ #######
 Contains files and directories from tools and builds used to automate workflow such as gulp, minified files and compressed images etc.
 
-##Solution
+## Solution
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+#### Part 1: Optimize PageSpeed Insights score for index.html
 
 1. Attribute media="print" added to the print.css to unblock critical rendering path.
 2. Attribute async added to Google Analytics Script to prevent blocking of DOM construction. 
@@ -28,7 +28,7 @@ Contains files and directories from tools and builds used to automate workflow s
 6. Compressed all Images using gulp-image, resized pizzeria.jpg
 
 
-####Part 2: Optimize Frames per Second in pizza.html
+#### Part 2: Optimize Frames per Second in pizza.html
 
 Modify main.js to a frames per second rate of 60 fps or higher.
 
@@ -47,7 +47,7 @@ Modify main.js to a frames per second rate of 60 fps or higher.
 
 FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
-###The Build
+### The Build
 **Install Gulp [http://gulpjs.com/] so that CSS and JS can be minified.** 
 
 To Install Gulp on Windows using the command prompt.
@@ -145,7 +145,7 @@ gulp.task('compress', function (cb) {
       ```    
 
 
-#Resources
+# Resources
 ### Optimization Tips and Tricks
 * [Web Font Loader](https://github.com/typekit/webfontloader)
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
